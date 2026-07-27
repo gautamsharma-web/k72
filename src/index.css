@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Lausane";
+  src: url(../public/fonts/Lausanne-500.woff2);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+.bg-link {
+  animation: slideAnim 10s infinite linear;
+  transition: all 5s linear;
+  height: 0;
+  opacity: 0.9;
+  display: none;
+}
+@keyframes slideAnim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.link {
+  cursor: pointer;
+}
+.link:hover .bg-link {
+  height: 100%;
+  opacity: 1;
+  display: flex;
+}
